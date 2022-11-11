@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.bibliotecamagica.model.Usuario;
-import br.com.bibliotemagica.repository.UsuarioRepository;
+import br.com.bibliotecamagica.repository.UsuarioRepository;
 
 @Controller
 @RequestMapping("/usuario")
@@ -71,7 +71,7 @@ public class UsuarioController {
     public String excluir(@PathVariable Long id) {
        usuarioRepository.deleteById(id);
 
-        return "redirect:/pacote";
+        return "redirect:/usuario";
     }
 
 }

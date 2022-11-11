@@ -1,4 +1,4 @@
-package br.com.bibliotemagica.repository;
+package br.com.bibliotecamagica.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

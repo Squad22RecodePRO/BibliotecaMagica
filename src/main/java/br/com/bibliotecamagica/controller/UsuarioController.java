@@ -51,7 +51,7 @@ public class UsuarioController {
 	}
 
     @GetMapping("/{id}/editar")
-    public ModelAndView editar(@PathVariable long id) {
+    public ModelAndView editar(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView("usuario/editar");
 
         modelAndView.addObject("usuario", usuarioRepository.getOne(id));
@@ -68,7 +68,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}/excluir")
-    public String excluir(@PathVariable long id) {
+    public String excluir(@PathVariable Long id) {
        usuarioRepository.deleteById(id);
 
         return "redirect:/pacote";

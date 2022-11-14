@@ -11,67 +11,67 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.com.bibliotecamagica.model.Usuario;
-import br.com.bibliotecamagica.repository.UsuarioRepository;
+import br.com.bibliotecamagica.model.Genero;
+import br.com.bibliotecamagica.repository.GeneroRepository;
 
 @Controller
-@RequestMapping("/usuario")
-public class UsuarioController {
-	
+@RequestMapping("/genero")
+public class GeneroController {
+
 	@Autowired
-	private UsuarioRepository usuarioRepository;
+	private GeneroRepository generoRepository;
 	
 	@GetMapping
 	public ModelAndView home() {
-		ModelAndView modelAndView = new ModelAndView("usuario/home.html");
+		ModelAndView modelAndView = new ModelAndView("genero/home.html");
 		
-		List<Usuario> usuario = usuarioRepository.findAll();
-		modelAndView.addObject("usuario", usuario);
+		List<Genero> genero = generoRepository.findAll();
+		modelAndView.addObject("genero", genero);
 		
 		return modelAndView;
 	}
 	
 	@GetMapping("/cadastrar")
     public ModelAndView cadastrar() {
-        ModelAndView modelAndView = new ModelAndView("usuario/cadastro");
+        ModelAndView modelAndView = new ModelAndView("genero/cadastro");
 
-        modelAndView.addObject("usuario", new Usuario());
+        modelAndView.addObject("genero", new Genero());
        
         return modelAndView;
     }
     
 	@PostMapping("/cadastrar")
-	public ModelAndView cadastrar(Usuario usuario) throws IOException {
+	public ModelAndView cadastrar(Genero genero) throws IOException {
 
-		ModelAndView modelAndView = new ModelAndView("redirect:/usuario");
+		ModelAndView modelAndView = new ModelAndView("redirect:/genero");
 
-		usuarioRepository.save(usuario);
+		generoRepository.save(genero);
 
 		return modelAndView;
 	}
 
     @GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("usuario/editar.html");
+        ModelAndView modelAndView = new ModelAndView("genero/editar");
 
-        modelAndView.addObject("usuario", usuarioRepository.getOne(id));
+        modelAndView.addObject("genero", generoRepository.getOne(id));
         
         return modelAndView;
     }
 
     @PostMapping("/{id}/editar")
-    public String salvar(Usuario usuario) {
+    public String salvar(Genero genero) {
     
-        usuarioRepository.save(usuario);
+        generoRepository.save(genero);
 
-        return "redirect:/usuario";
+        return "redirect:/genero";
     }
 
     @GetMapping("/{id}/excluir")
     public String excluir(@PathVariable Long id) {
-       usuarioRepository.deleteById(id);
+       generoRepository.deleteById(id);
 
-        return "redirect:/usuario";
+        return "redirect:/genero";
     }
 
 }

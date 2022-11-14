@@ -30,6 +30,18 @@ public class Usuario {
 	@Column(name = "data_nasc", nullable = false)
 	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate dataNasc;
+	
+	public Usuario() {
+		
+	}
+
+	public Usuario(long id, String nome, String email, LocalDate dataNasc) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.email = email;
+		this.dataNasc = dataNasc;
+	}
 
 	public long getId() {
 		return id;

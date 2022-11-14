@@ -78,7 +78,8 @@
 					<thead class="table-light">
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Nome do gênero</th>
+							<th scope="col">Gênero</th>
+							<th scope="col">Atributo</th>
 							<th scope="col" style="width: 130px;">Ações</th>
 						</tr>
 					</thead>
@@ -87,7 +88,8 @@
 						<tr th:each="genero : ${genero}">
 							<td th:text="${genero.id}"></td>
 							<td th:text="${genero.nome}"></td>
-					
+							<td th:text="${genero.atributo}"></td>
+												
 							<td class="p-2">
 								<a th:href="@{/genero/{id}/editar (id=${genero.id})}"
 									class="btn btn-outline-info me-2"><svg xmlns="http://www.w3.org/2000/svg" width="18"

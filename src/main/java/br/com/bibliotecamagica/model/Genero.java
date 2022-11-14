@@ -20,14 +20,18 @@ public class Genero {
 	@Column(nullable = false)
 	private String nome;
 	
+	@Column(nullable = false)
+	private String atributo;
+	
 	public Genero() {
 		
 	}
 
-	public Genero(long id, String nome) {
+	public Genero(long id, String nome, String atributo) {
 		super();
 		this.id = id;
 		this.nome = nome;
+		this.atributo = atributo;
 	}
 
 	public long getId() {
@@ -45,10 +49,18 @@ public class Genero {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public String getAtributo() {
+		return nome;
+	}
+
+	public void setAtributo(String atributo) {
+		this.atributo = atributo;
+	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, nome);
+		return Objects.hash(atributo, id, nome);
 	}
 
 	@Override
@@ -60,12 +72,14 @@ public class Genero {
 		if (getClass() != obj.getClass())
 			return false;
 		Genero other = (Genero) obj;
-		return id == other.id && Objects.equals(nome, other.nome);
+		return Objects.equals(atributo, other.atributo) && id == other.id && Objects.equals(nome, other.nome);
 	}
 
 	@Override
 	public String toString() {
-		return "Genero [id=" + id + ", nome=" + nome + "]";
+		return "Genero [id=" + id + ", nome=" + nome + ", atributo=" + atributo + "]";
 	}
+
 	
 }
+

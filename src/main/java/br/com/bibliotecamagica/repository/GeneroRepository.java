@@ -7,3 +7,4 @@ import br.com.bibliotecamagica.model.Genero;
 public interface GeneroRepository extends JpaRepository<Genero, Long>{
 
 }
+

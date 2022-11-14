@@ -1,0 +1,19 @@
+.quemsomos{
+	text-align: center;
+}
+
+.img-card{
+	position: relative;
+    display: inline-block;
+    width: 18rem;
+}
+.img-card:hover img{
+	display:none;
+}
+.img-card:hover .colabs-text{
+	display: block;
+}
+
+.colabs-text{
+	display: none;
+}

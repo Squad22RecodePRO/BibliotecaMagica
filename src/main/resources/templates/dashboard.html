@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{styles/dashboard.css}">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  
     <title>Dashboard</title>
 </head>
 <body>
@@ -13,29 +15,29 @@
     <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h3><img class="img-logo" src="img/recode_pro-logo-1.svg" alt="Logo Recode Pro"> Recode Pro</h3>
+            <h3><img class="img-logo" th:src="@{img/recode_pro-logo-1.svg}" alt="Logo Recode Pro"> Recode Pro</h3>
         </div>
 
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="" class="active"><span class="las la-user"></span>
+                    <a th:href="@{/usuario}" class="active"><span class="las la-user"></span>
                     <span>Usuarios</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-hand-paper"></span>
+                    <a th:href="@{/permissao}"><span class="las la-hand-paper"></span>
                     <span>Permissões</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-book"></span>
+                    <a th:href="@{/livros}"><span class="las la-book"></span>
                     <span>Livros</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-igloo"></span>
+                    <a th:href="@{/generos}"><span class="las la-igloo"></span>
                     <span>Generos</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-question-circle"></span>
+                    <a th:href="@{/perguntas}"><span class="las la-question-circle"></span>
                     <span>Perguntas</span></a>
                 </li>
                 
@@ -58,7 +60,7 @@
                 <input type="search" placeholder="Digite aqui">
             </div>
             <div class="user-wrapper">
-                <img src="img/perfil-30.jpeg" alt="" width="30xp" height="30px">
+                <img th:src="@{img/perfil-30.jpeg}" alt="" width="30xp" height="30px">
                 <div>
                     <h4>user name account</h4>
                     <small>permission</small>
@@ -72,5 +74,7 @@
         </main>
     </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

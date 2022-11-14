@@ -52,7 +52,7 @@ public class GeneroController {
 
     @GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("genero/editar.html");
+        ModelAndView modelAndView = new ModelAndView("genero/editar");
 
         modelAndView.addObject("genero", generoRepository.getOne(id));
         
@@ -74,3 +74,4 @@ public class GeneroController {
         return "redirect:/genero";
     }
 }
+

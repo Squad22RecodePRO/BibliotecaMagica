@@ -35,7 +35,7 @@ public class GeneroController {
     public ModelAndView cadastrar() {
         ModelAndView modelAndView = new ModelAndView("genero/cadastro");
 
-        modelAndView.addObject("genero", new genero());
+        modelAndView.addObject("genero", new Genero());
        
         return modelAndView;
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" th:fragment="dashboard (title, content, styles)">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,7 @@
 </head>
 <body>
 
+    <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
             <h3><img class="img-logo" src="img/recode_pro-logo-1.svg" alt="Logo Recode Pro"> Recode Pro</h3>
@@ -45,7 +46,7 @@
     <div class="main-content">
         <header>
             <h1>
-                <label for="">
+                <label for="nav-toggle">
                     <span class="las la-bars"></span>
                 </label>
                 <!-- $title page-->
@@ -64,17 +65,12 @@
                 </div>
             </div>
             
-            
-            
         </header>
-        <main>
+        <main th:include="${content}">
             <!-- Codigo de cada pagina-->
-            <p>Conteudo carregado via thymeleaf</p>
+            
         </main>
     </div>
-
-
-
 
 </body>
 </html>

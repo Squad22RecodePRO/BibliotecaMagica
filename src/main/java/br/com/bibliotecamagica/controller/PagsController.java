@@ -1,12 +1,10 @@
-package com.squad22.bibliotecamagica.controller;
-
+package br.com.bibliotecamagica.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class PagsController {
 
-	
 	
 	@GetMapping("/")
 	public String home() {

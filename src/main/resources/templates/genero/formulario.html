@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html th:replace="~{dashboard :: dashboard (~{::title}, ~{::main}, _)}">
+<head>
+	<title>Cadastro genero</title>
+</head>
+<body>
+
+	<main>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card">
+					<form method="POST" th:object="${genero}">
+
+						<div class="card-body">
+							<input required type="hidden" th:field="*{id}">
+
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="nome">Nome</label>
+										<input required type="text" class="form-control"
+											placeholder="Ficção" th:field="*{nome}">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="nome">Atributo</label>
+										<input required type="text" class="form-control"
+											placeholder="Força" th:field="*{atributo}">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-footer">
+							<button type="submit" class="btn btn-primary">Salvar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<th:block>
+		<script>
+			window.onload = (event) => {
+  				alert('page is fully loaded');
+			};
+		</script>
+	</th:block>
+</body>
+
+</html>

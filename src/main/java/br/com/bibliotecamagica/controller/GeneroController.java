@@ -23,7 +23,7 @@ public class GeneroController {
 	
 	@GetMapping
 	public ModelAndView home() {
-		ModelAndView modelAndView = new ModelAndView("genero/home.html");
+		ModelAndView modelAndView = new ModelAndView("genero/home");
 		
 		List<Genero> genero = generoRepository.findAll();
 		modelAndView.addObject("genero", genero);
@@ -33,39 +33,28 @@ public class GeneroController {
 	
 	@GetMapping("/cadastrar")
     public ModelAndView cadastrar() {
-        ModelAndView modelAndView = new ModelAndView("genero/cadastro");
+        ModelAndView modelAndView = new ModelAndView("genero/formulario");
 
         modelAndView.addObject("genero", new Genero());
        
         return modelAndView;
     }
-    
-	@PostMapping("/cadastrar")
-	public ModelAndView cadastrar(Genero genero) throws IOException {
-
-		ModelAndView modelAndView = new ModelAndView("redirect:/genero");
-
-		generoRepository.save(genero);
-
-		return modelAndView;
-	}
-
     @GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("genero/editar");
+        ModelAndView modelAndView = new ModelAndView("genero/formulario");
 
         modelAndView.addObject("genero", generoRepository.getOne(id));
         
         return modelAndView;
     }
-
-    @PostMapping("/{id}/editar")
-    public String salvar(Genero genero) {
     
-        generoRepository.save(genero);
+	@PostMapping({"/cadastrar", "/{id}/editar"})
+	public String Salvar(Genero genero){
 
-        return "redirect:/genero";
-    }
+		generoRepository.save(genero);
+
+		return "redirect:/genero";
+	}
 
     @GetMapping("/{id}/excluir")
     public String excluir(@PathVariable Long id) {

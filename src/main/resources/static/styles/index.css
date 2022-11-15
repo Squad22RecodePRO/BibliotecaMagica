@@ -1,0 +1,11 @@
+.project-name{
+	color:#000;
+	text-align: center;
+	padding-top: 1rem;
+}
+.project-name h2{
+	color:#000;
+}
+.apresentacao{
+	display: flex;
+}

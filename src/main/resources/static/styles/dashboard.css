@@ -147,7 +147,7 @@ main{
 }
 #nav-toggle:checked + .sidebar .sidebar-brand,
 #nav-toggle:checked + .sidebar li{
-    padding-left: 1rem;
+    padding-left: .4rem;
     text-align: center;
 }
 

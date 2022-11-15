@@ -51,7 +51,7 @@ public class Genero {
 	}
 	
 	public String getAtributo() {
-		return nome;
+		return atributo;
 	}
 
 	public void setAtributo(String atributo) {

@@ -27,6 +27,9 @@ public class Usuario {
 	@Column(nullable = false)
 	private String email;
 	
+//	@Column(nullable = false)
+//	private String senha;
+	
 	@Column(name = "data_nasc", nullable = false)
 	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate dataNasc;

@@ -23,7 +23,7 @@ public class UsuarioController {
 	
 	@GetMapping
 	public ModelAndView home() {
-		ModelAndView modelAndView = new ModelAndView("usuario/home.html");
+		ModelAndView modelAndView = new ModelAndView("usuario/home");
 		
 		List<Usuario> usuario = usuarioRepository.findAll();
 		modelAndView.addObject("usuario", usuario);
@@ -52,7 +52,7 @@ public class UsuarioController {
 
     @GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("usuario/editar.html");
+        ModelAndView modelAndView = new ModelAndView("usuario/editar");
 
         modelAndView.addObject("usuario", usuarioRepository.getOne(id));
         

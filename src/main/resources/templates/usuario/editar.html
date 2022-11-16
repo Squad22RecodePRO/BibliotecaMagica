@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html th:replace="~{dashboard :: dashboard (~{::title}, ~{::main}, _)}">
+<head>
+	<title>Cadastrar Usuario</title>
+</head>
+<body>
+
+	<main>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card">
+					<form method="POST" th:object="${usuario}">
+
+						<div class="card-body">
+							<input required type="hidden" th:field="*{id}">
+
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="nome">Nome</label>
+										<input required type="text" class="form-control"
+											placeholder="Ficção" th:field="*{nome}">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="nome">Email</label>
+										<input required type="email" class="form-control"
+											placeholder="Força" th:field="*{email}">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="nome">Data de Nascimento</label>
+										<input required type="date" class="form-control"
+											placeholder="Força" th:field="*{dataNasc}">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-footer">
+							<button type="submit" class="btn btn-primary">Salvar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

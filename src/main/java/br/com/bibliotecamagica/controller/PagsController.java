@@ -24,5 +24,4 @@ public class PagsController {
 	public String quemsomos() {
 		return "quemsomos";
 	}
-	
 }

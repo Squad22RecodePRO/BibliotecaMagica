@@ -47,11 +47,4 @@ public class BibliotecaController {
 		return modelAndView;
 	}
 	
-	
-	
-	
-  
-    
-	
-
 }

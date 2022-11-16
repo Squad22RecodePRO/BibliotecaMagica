@@ -1,3 +1,6 @@
+:root{
+    --card-color: #fbebc3;
+}
 .project-name{
 	color:#000;
 	text-align: center;
@@ -5,13 +8,47 @@
 }
 .project-name h2{
 	color:#000;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .apresentacao{
-	display: flex;
-	margin-top: 2rem;
+	width: 80%;
+	margin: auto;
+
 }
 .apresentacao-video{
+	width: 100%;
 	margin: auto;
 	justify-content:center;
 	align-items: center;
 }
+
+.apresentacao-video iframe{
+	width: 100%;
+	height: 60vh;
+	margin: auto;
+}
+.slides .card{
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	margin: auto;
+}
+/*
+.slides{
+	background: var(--card-color);
+}
+*/
+.slides img{
+	width: 100%;
+}
+.slides img:hover{
+	opacity: 0.1;
+}
+.slides .card{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+/*
+
+*/

@@ -8,4 +8,10 @@
 }
 .apresentacao{
 	display: flex;
+	margin-top: 2rem;
+}
+.apresentacao-video{
+	margin: auto;
+	justify-content:center;
+	align-items: center;
 }

@@ -30,13 +30,14 @@ public class LivroController {
 	
 	@GetMapping
 	public ModelAndView home() {
-		ModelAndView modelAndView = new ModelAndView("livro/home");
+		ModelAndView modelAndView = new ModelAndView("livro/home.html");
 		
 		List<Livro> livro = livroRepository.findAll();
 		modelAndView.addObject("livro", livro);
 		
 		return modelAndView;
 	}
+	
 	
 	@GetMapping("/cadastrar")
     public ModelAndView cadastrar() {
@@ -73,7 +74,7 @@ public class LivroController {
 
     @GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("livro/editar");
+        ModelAndView modelAndView = new ModelAndView("livro/editar.html");
 
         modelAndView.addObject("livro", livroRepository.getOne(id));
         modelAndView.addObject("genero", generoRepository.findAll());

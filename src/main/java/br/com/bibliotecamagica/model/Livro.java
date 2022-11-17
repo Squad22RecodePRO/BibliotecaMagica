@@ -32,8 +32,6 @@ public class Livro {
 	@Column(nullable = false)
 	private StringBuffer resumo;
 	
-	@Lob
-	private byte[] capa;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "genero", nullable = false)
@@ -85,13 +83,7 @@ public class Livro {
 		this.resumo = resumo;
 	}
 
-	public byte[] getCapa() {
-		return capa;
-	}
 
-	public void setCapa(byte[] capa) {
-		this.capa = capa;
-	}
 
 	public Genero getGenero() {
 		return Genero;

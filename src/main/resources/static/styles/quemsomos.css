@@ -1,19 +1,103 @@
-.quemsomos{
-	text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.bd-qs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.img-card{
-	position: relative;
-    display: inline-block;
-    width: 18rem;
+.container-qs{
+    display: flex;
+    background: whitesmoke;
 }
-.img-card:hover img{
-	display:none;
-}
-.img-card:hover .colabs-text{
-	display: block;
+.img-qs{
+    height: 400px;
+    width: 280px;
+    border-radius: 3px;
 }
 
-.colabs-text{
-	display: none;
+.card-qs{
+    height: 400px;
+    margin: 1rem;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+.intro{
+    height: 56px;
+    width: 280px;
+    padding: 0.5px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgb(27,27,27,.2);
+    bottom: 96px;
+    color: white;
+    transition: .7s;
+}
+h2{
+    margin: 10px;
+    font-size: 2rem;
+}
+.p{
+    font-size: 1.125rem;
+    margin: 1.125rem;
+    visibility: hidden;
+    opacity: 0;
+}
+span{
+    font-weight: bold;
+}
+.card-qs:hover{
+    cursor: pointer;
+}
+.card-qs:hover .intro{
+    height: 180px;
+    bottom: 96px;
+    background-color: rgb(89, 89, 89);
+}
+.card-qs:hover .p{
+    opacity: 1;
+    visibility: visible;
+}
+.card-qs:hover img{
+    transform: scale(1.1) rotate(-3deg);
+}
+span{
+    width: 64px;
+}
+.img-logos{
+	width: 32px;
+}
+@media only screen and (max-width: 1379px){
+	.img-qs{
+    height: 300px;
+    width: 210px;
+    border-radius: 3px;
+}
+
+	.card-qs{
+    height: 300px;
+    margin: 2rem;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+	}
+	.intro{
+    height: 56px;
+    width: 210px;
+    padding: 0.5px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgb(27,27,27,.2);
+    bottom: 96px;
+    color: white;
+    transition: .7s;
+	}
+	.card-qs:hover .intro{
+    height: 180px;
+    bottom: 96px;
+    background-color: rgb(89, 89, 89);
+	}
 }

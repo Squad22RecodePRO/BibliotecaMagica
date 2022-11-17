@@ -2,67 +2,75 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{styles/global.css}">
-	<link rel="stylesheet" th:href="@{styles/contato.css}"> 
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{styles/global.css}">
+	<link rel="stylesheet" th:href="@{styles/contato.css}">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
-    <title>Contato</title>
+	<title>Contato</title>
 
 </head>
+
 <body>
 
 
 	<!-- Nav Bar -->
-    <nav th:replace="~{fragments/_navbar :: navbar}"></nav>
+	<nav th:replace="~{fragments/_navbar :: navbar}"></nav>
+
+
 
 	<div class="container">
-	
-		<div class="body-contato">
-			<h2>Sua opinião é muito importante para nós.</h2>
-			<div class="texto">
-				<h5>Nosso projeto tem o intuito de transformar a vida de adolescentes auxiliando eles com a leitura 
-				de livros, buscando melhorar e democratizar o acesso aos mesmos.</h5>
-				<h5>Buscamos melhorar cada vez mais e por isso gostariamos do seu feedback e de suas sugestões.</h5>
+		<div class="row my-5 body-contato">
+			<div class="col-12 d-flex justify-content-center">
+				<img class="img-fluid" th:src="@{img/contato.png}">
 			</div>
 		</div>
-	
-		<h4>Nos envie uma mensagem.</h4>
-		<div class="form-contato">
-			
+
+
+
+		<h3 class="text-center">Nos envie uma mensagem.</h3>
+		<div class="form-contato mb-5">
+
 			<form class="form-floating" method="POST">
-			  <div class="form-floating mb-3">
-				 <input type="email" id="emailInput" class="form-control" placeholder="name@example.com" required aria-describedby="emailHelp">
-				 <label for="emailInput">Email</label>
-				 <div id="emailHelp" class="form-text">Nós não compartilhamos o seu email com ninguém.</div>
-			  </div>
-			  <div class="form-floating mb-3">
-				 <input type="text" id="assuntoInput" class="form-control" placeholder="name@example.com" required aria-describedby="emailHelp">
-				 <label for="assuntoInput">Assunto</label>
+				<div class="form-floating mb-3">
+					<input type="email" id="emailInput" class="form-control" placeholder="name@example.com" required
+						aria-describedby="emailHelp">
+					<label for="emailInput">Email</label>
+					<div id="emailHelp" class="form-text">Nós não compartilhamos o seu email com ninguém.</div>
 				</div>
-			  <div class="form-floating">
-				<textarea class="form-control" required maxlength="400"  placeholder="Leave a comment here" id="floatingTextarea" rows="3"></textarea>
-				<label for="floatingTextarea">Escreva</label>
-			  </div>
-			  <div class="form-check form-switch">
-				<input class="form-check-input" type="checkbox" role="switch" required id="flexSwitchCheckDefault">
-				<label class="form-check-label" for="flexSwitchCheckDefault">Concordo com os termos de privacidade.</label>
-			   </div>
-			  
-			  <button type="submit" class="btn btn-primary">Enviar</button>
+				<div class="form-floating mb-3">
+					<input type="text" id="assuntoInput" class="form-control" placeholder="name@example.com" required
+						aria-describedby="emailHelp">
+					<label for="assuntoInput">Assunto</label>
+				</div>
+				<div class="form-floating">
+					<textarea class="form-control" required maxlength="400" placeholder="Leave a comment here"
+						id="floatingTextarea" rows="3"></textarea>
+					<label for="floatingTextarea">Escreva</label>
+				</div>
+				<div class="form-check form-switch">
+					<input class="form-check-input" type="checkbox" role="switch" required id="flexSwitchCheckDefault">
+					<label class="form-check-label" for="flexSwitchCheckDefault">Concordo com os termos de
+						privacidade.</label>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Enviar</button>
 			</form>
 		</div>
 	</div>
 
 	<!-- footer com formas de pagamentos e desenvolvido-->
-    <footer th:replace="~{fragments/_footer :: footer}"></footer>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<footer th:replace="~{fragments/_footer :: footer}"></footer>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
 </body>
+
 </html>

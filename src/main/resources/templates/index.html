@@ -2,54 +2,66 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{styles/global.css}">
-    <link rel="stylesheet" th:href="@{styles/index.css}">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{styles/global.css}">
+	<link rel="stylesheet" th:href="@{styles/index.css}">
 	<!--<link rel="stylesheet" th:href="@{styles/index.css}"> -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Biblioteca Mágica</title>
+	<title>Biblioteca Mágica</title>
 </head>
 
 <body>
-    
 
-    <!-- Nav Bar -->
-    <nav th:replace="~{fragments/_navbar :: navbar}"></nav>
-	
-    <div class="container-fluid centro">
+
+	<!-- Nav Bar -->
+	<nav th:replace="~{fragments/_navbar :: navbar}"></nav>
+
+	<div class="container-fluid centro">
 
 		<div class="project-name">
-			<h2>Biblioteca Mágica</h2>
-		</div>
-		
-		<div class="apresentacao">
-			<div class="apresentacao-video">
-				<iframe src="https://www.youtube.com/embed/tVN8AQ56Rhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			
-		</div>
-		<div class="slides">
-			<div class="card">
-				<img th:src="@{img/slides/slide-2.png}">
-			</div>
-			<div class="card">
-				<img th:src="@{img/slides/slide-3.png}">
-			</div>
-		</div>
+			<div class="row mb-5">
 
-    </div>
-    <hr>
-    <!-- footer com formas de pagamentos e desenvolvido-->
-    <footer th:replace="~{fragments/_footer :: footer}"></footer>
-	
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
+				<div class="col-md-8">
+
+					<img class="img-fluid" th:src="@{img/textoindex.png}">
+				</div>
+
+				<div class="col-md-4">
+					<img class="img-fluid" th:src="@{img/guerreira.png}">
+				</div>
+
+			</div>
+
+			<div class="apresentacao">
+				<div class="apresentacao-video">
+					<iframe src="https://www.youtube.com/embed/tVN8AQ56Rhs" title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+
+			</div>
+			<div class="row my-5 py-5" style="background-color: #fbebc3ff">
+				<div class="col-md-6">
+				<img class="img-fluid" th:src="@{img/texto2.png}">
+				</div>
+				<div class="col-md-6">
+					<img class="img-fluid" th:src="@{img/telas.png}">
+				</div>
+			</div>
+
+		</div>
+		<hr>
+		<!-- footer -->
+		<footer th:replace="~{fragments/_footer :: footer}"></footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"></script>
 
 </body>
 

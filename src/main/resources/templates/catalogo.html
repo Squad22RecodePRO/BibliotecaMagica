@@ -6,47 +6,104 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" th:href="@{styles/catalogo.css}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet"
+		crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet"
+		crossorigin="anonymous">
 
 	<title>Catalogo</title>
 
+	<link rel="stylesheet" th:href="@{styles/global.css}">
+	<link rel="stylesheet" th:href="@{styles/index.css}">
+	<link rel="stylesheet" th:href="@{styles/catalogo.css}">
 </head>
 
 <body>
 
-	    <!-- Nav Bar -->
-    	<nav th:replace="~{fragments/_navbar :: navbar}"></nav>
+	<div class="container-fluid">
+		<!-- Nav Bar -->
+		<nav th:replace="~{fragments/_navbar :: navbar}"></nav>
 
-        
-        <h2 class="text-center">Biblioteca</h2>
-        <h3 class="text-center">Escolha um livro e comece sua aventura</h3>
-        
-         <div class="container-fluid">
-            <div class="row  m-2 d-flex justify-content-center ">
-                <div class="card text-center p-0 m-2 border border-info "  th:each="livro : ${livro}" style="width: 12rem; height:15rem;">
-                            <h4 class="card-title mt-5"  style="color:blue;" th:text="${livro.titulo}"></h4>
-                            <p class="card-text" th:text="${livro.autor}"></p>
-                            
-                            <a  th:href="@{/catalogo/{id} (id=${livro.id})}" value="$livro.id" class="btn btn-secondary btn-sm">Ler</a>
-                           
-                                 </div>
-                                         
-                              
-                    
-                </div>
-            </div>
-        </div>  
 
-        
-        
-        
-        
-    <!-- footer com formas de pagamentos e desenvolvido-->
-    <footer th:replace="~{fragments/_footer :: footer}"></footer>
-	
+		<div class="row banner mb-4">
+			<div class="col-md-11 ">
+				<h3 class="text-center texto">Escolha um livro e comece sua aventura</h3>
+			</div>
+			<div class="col-md-12 ">
+				<h5 class="text-center">Suas habilidades mudam conforme os gêneros que você lê.</h5>
+			</div>
+			<div class="col-md-2 m-2 ">
+				<img class="img-fluid" th:src="@{img/catalogo1.png}">
+			</div>
+			<div class="col-md-2 m-2 ">
+				<img class="img-fluid" th:src="@{img/catalogo2.png}">
+			</div>
+			<div class="col-md-2 m-2">
+				<img class="img-fluid" th:src="@{img/catalogo3.png}">
+			</div>
+			<div class="col-md-2 m-2">
+				<img class="img-fluid" th:src="@{img/catalogo4.png}">
+			</div>
+			<div class="col-md-2 m-2">
+				<img class="img-fluid" th:src="@{img/catalogo5.png}">
+			</div>
+		</div>
+		<div class="container-fluid atributos">
+			<div class="row  m-2 d-flex justify-content-center">
+
+
+				<div class="card livro" th:each="livro : ${livro}">
+					<p class="card-title titulo" th:text="${livro.titulo}"></p>
+
+					<p class="card-text autor" th:text="${livro.autor}"></p>
+					<p class="card-text genero" th:text="${livro.genero.nome}"></p>
+					<div class="row d-flex justify-content-center">
+
+						<a type="submit" class="btn btn-outline-secondary" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">
+							Ler
+						</a>
+						<!-- Button trigger modal -->
+
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" th:text="${livro.titulo}"></h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body" th:text="${livro.resumo}">
+
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-bs-dismiss="modal">Fechar</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer-->
+		<footer th:replace="~{fragments/_footer :: footer}"></footer>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-		crossorigin="anonymous"></script>
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+
+		</script>
 
 </body>
 

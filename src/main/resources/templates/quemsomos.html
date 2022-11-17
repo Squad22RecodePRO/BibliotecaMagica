@@ -1,40 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{styles/global.css}">
-    <link rel="stylesheet" th:href="@{styles/quemsomos.css}">
-	<!--<link rel="stylesheet" th:href="@{styles/index.css}"> -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet"
+		href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<link rel="stylesheet" th:href="@{/styles/quemsomos.css}">
+	<link rel="stylesheet" th:href="@{/styles/global.css}">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <title>Empresa</title>
-
+	<title>Quem somos</title>
 </head>
+
 <body>
 
 	<!-- Nav Bar -->
-    <nav th:replace="~{fragments/_navbar :: navbar}"></nav>
-    
-	<div class="container-fluid">
-		<div class="quemsomos">
-			<h2>Conheça nossos colaboradores.</h2>
-			<div class="row">
-				<div class="card img-card" style="width: 18rem;">
-					<img th:src="@{img/colabs/vitor.jpeg}" class="colabs-img" alt="Imagem do colaborador">
-					<div class="colabs-text"style="width: 18rem;" >
-						<h4>Vitor Rubenich</h4>
-						<p>Desenvolvedor Web</p>
+	<nav th:replace="~{fragments/_navbar :: navbar}"></nav>
+
+
+			<h1 class="text-center mt-5" style="color: #400124;">Quem somos</h1>
+		
+	
+		<div class="bd-qs">
+		
+
+			<div class="container-qs">
+				<div class="card-qs">
+					<img class="img-qs" th:src="@{/img/colabs/vitor.jpeg}">
+					<div class="intro">
+						<h2>Vitor</h2>
+						<div class="p">
+							<p>Desenvolvedor Full-Stack</p>
+							<a href="https://github.com/VitorRubenich" target="_blank"><img class="img-logos"
+									th:src="@{/img/git-2.png}"></a>
+							<a href="https://www.linkedin.com/in/vitorrubenich/" target="_blank"><img class="img-logos"
+									th:src="@{/img/linkedin.png}"></a>
+						</div>
+					</div>
+				</div>
+				<div class="card-qs">
+					<img class="img-qs" th:src="@{/img/colabs/aline.jpeg}">
+					<div class="intro">
+						<h2>Aline</h2>
+						<div class="p">
+							<p>Desenvolvedora Full-Stack</p>
+							<a href="https://github.com/AlineSilvaFerreira" target="_blank"><img class="img-logos"
+									th:src="@{/img/git-2.png}"></a>
+							<a href="https://www.linkedin.com/in/aline-silva-38a84b115/" target="_blank"><img
+									class="img-logos" th:src="@{/img/linkedin.png}"></a>
+						</div>
+					</div>
+				</div>
+				<div class="card-qs">
+					<img class="img-qs" th:src="@{/img/colabs/brendo.jpeg}">
+					<div class="intro">
+						<h2>Brendo</h2>
+						<div class="p">
+							<p>Desenvolvedor Full-Stack</p>
+							<a href="https://github.com/Brendo-Moreira99" target="_blank"><img class="img-logos"
+									th:src="@{/img/git-2.png}"></a>
+							<a href="https://www.linkedin.com/in/brendo-moreira-550749247/" target="_blank"><img
+									class="img-logos" th:src="@{/img/linkedin.png}"></a>
+						</div>
+					</div>
+				</div>
+				<div class="card-qs">
+					<img class="img-qs" th:src="@{/img/colabs/claudia-2.jpeg}">
+					<div class="intro">
+						<h2>Claudia</h2>
+						<div class="p">
+							<p>Desenvolvedora Full-Stack</p>
+							<a href="https://github.com/todorovicclaudia" target="_blank"><img class="img-logos"
+									th:src="@{/img/git-2.png}"></a>
+							<a href="http://www.linkedin.com/in/claudia-todorovic-7b2759236" target="_blank"><img
+									class="img-logos" th:src="@{/img/linkedin.png}"></a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- footer com formas de pagamentos e desenvolvido-->
-    <footer th:replace="~{fragments/_footer :: footer}"></footer>
+<div class="row  body-contato mb-5">
+			<div class="col-12 d-flex justify-content-center">
+				<img class="img-fluid" th:src="@{img/quemsomos.png}">
+			</div>
+		</div>
+		<!-- footer com formas de pagamentos e desenvolvido-->
+		<footer th:replace="~{fragments/_footer :: footer}"></footer>
+
 </body>
+
 </html>

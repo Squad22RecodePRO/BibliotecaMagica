@@ -38,8 +38,8 @@ public class BibliotecaController {
 	
 
 	@GetMapping("/{id}")
-	public ModelAndView detalhar(@PathVariable Long id) {
-		ModelAndView modelAndView = new ModelAndView("resumo.html");
+	public ModelAndView resumo(@PathVariable Long id) {
+		ModelAndView modelAndView = new ModelAndView("catalogo.html");
 
 		Livro livro = livroRepository.getOne(id);
 		modelAndView.addObject("livro", livro);
@@ -47,4 +47,11 @@ public class BibliotecaController {
 		return modelAndView;
 	}
 	
+	
+	
+	
+  
+    
+	
+
 }

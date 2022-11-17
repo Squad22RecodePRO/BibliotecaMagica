@@ -50,13 +50,7 @@ public class LivroController {
     }
     
 	@PostMapping("/cadastrar")
-	public ModelAndView cadastrar(Livro livro, @RequestParam("fileCapa") MultipartFile fileCapa) throws IOException {
-		
-		try {
-			livro.setCapa(fileCapa.getBytes());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}		
+	public ModelAndView cadastrar(Livro livro) throws IOException {
 		
 		ModelAndView modelAndView = new ModelAndView("redirect:/livro");
 
@@ -65,12 +59,7 @@ public class LivroController {
 		return modelAndView;
 	}
 	
-	@GetMapping("/fileCapa/{id}")
-	@ResponseBody
-	public byte[] exibirImagem(@PathVariable("id") Long id) {
-		Livro livro = this.livroRepository.getOne(id);
-		return livro.getCapa();
-	}	
+	
 
     @GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id) {
@@ -81,6 +70,8 @@ public class LivroController {
         
         return modelAndView;
     }
+  
+	
 
     @PostMapping("/{id}/editar")
     public String salvar(Livro livro) {

@@ -15,7 +15,10 @@
     <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h3><img class="img-logo" th:src="@{/img/recode_pro-logo-1.svg}" alt="Logo Recode Pro"> Recode Pro</h3>
+            <p></p>
+            <h3><img class="img-logo" th:src="@{/img/recode_pro-logo-1.svg}" alt="Logo Recode Pro"> </h3>
+            
+            <p>Recode Pro</p>
         </div>
 
         <div class="sidebar-menu">
@@ -25,19 +28,19 @@
                     <span>Usuarios</span></a>
                 </li>
                 <li>
-                    <a th:href="@{/permissao}"><span class="las la-hand-paper"></span>
+                    <a th:href="@{/permissao}" class="active"><span class="las la-hand-paper"></span>
                     <span>Permissões</span></a>
                 </li>
                 <li>
-                    <a th:href="@{/livros}"><span class="las la-book"></span>
+                    <a th:href="@{/livros}" class="active"><span class="las la-book"></span>
                     <span>Livros</span></a>
                 </li>
                 <li>
-                    <a th:href="@{/generos}"><span class="las la-igloo"></span>
+                    <a th:href="@{/generos}" class="active"><span class="las la-igloo"></span>
                     <span>Generos</span></a>
                 </li>
                 <li>
-                    <a th:href="@{/perguntas}"><span class="las la-question-circle"></span>
+                    <a th:href="@{/perguntas}" class="active"><span class="las la-question-circle"></span>
                     <span>Perguntas</span></a>
                 </li>
                 
@@ -60,7 +63,7 @@
                 <input type="search" placeholder="Digite aqui">
             </div>
             <div class="user-wrapper">
-                <img th:src="@{/img/perfil-30.jpeg}" alt="" width="30xp" height="30px">
+                <img th:src="@{/img/perfil.png}" alt="" width="30xp" height="30px">
                 <div>
                     <h4>user name account</h4>
                     <small>permission</small>

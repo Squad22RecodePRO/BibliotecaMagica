@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html th:replace="~{dashboard :: dashboard (~{::title}, ~{::main}, _)}">
 <head>
-	<title>Cadastro genero</title>
+	<title>[[${genero.id == null ? 'Novo' : 'Editar'}]] genero</title>
 </head>
 <body>
 

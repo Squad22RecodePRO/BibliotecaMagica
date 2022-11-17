@@ -15,8 +15,10 @@
 }
 
 .img-logo{
-    width: 30px;
-    height: 12px;
+    width: 45px;
+    height: 18px;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar{
@@ -34,7 +36,24 @@
     padding-left: 1rem 0rem 1rem 2rem;
     color: #fff;
 }
-
+.sidebar-brand h3 img{
+	justify-content: center;
+	align-items: center;
+}
+.sidebar-brand h3{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.sidebar .sidebar-brand{
+	justify-content: center;
+	align-items: center;
+	
+}
+.sidebar-brand h3 .img-logo{
+	justify-content: center;
+	align-items: center;
+}
 .sidebar-brand span{
     display: inline-block;
     padding-right: 1rem;
@@ -56,14 +75,18 @@
 }
 
 
-.sidebar-menu a.active{
+.sidebar-menu a:hover.active{
     background: #fff;
     padding-top: 1rem;
     padding-bottom: 1rem;
     color: var(--main-color);
     border-radius: 30px 0px 0px 30px;
 }
-
+.sidebar-brand p{
+	display:flex;
+	text-align: center;
+	justify-content: center;
+}
 .sidebar-menu a span:first-child{
     font-size: 1.5rem;
     padding-right: 1rem;

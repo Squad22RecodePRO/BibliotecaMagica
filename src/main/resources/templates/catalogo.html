@@ -27,9 +27,9 @@
                             <h4 class="card-title mt-5"  style="color:blue;" th:text="${livro.titulo}"></h4>
                             <p class="card-text" th:text="${livro.autor}"></p>
                             
-                            <a  th:href="@{/catalogo/{id} (id=${livro.id})}" class="btn btn-secondary btn-sm">Ler</a>
+                            <a  th:href="@{/catalogo/{id} (id=${livro.id})}" value="$livro.id" class="btn btn-secondary btn-sm">Ler</a>
                            
-                                         </div>
+                                 </div>
                                          
                               
                     
